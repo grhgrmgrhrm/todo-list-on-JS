@@ -28,7 +28,7 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 // Создаём новый элемент списка при нажатии на кнопку "Добавить задачу".
-function newElement() {
+function newTask() {
     let li = document.createElement("li");
     let inputValue = document.getElementById("myInput").value;
     let t = document.createTextNode(inputValue);
@@ -56,9 +56,9 @@ function newElement() {
     }
 };
 
-// А вот здесь прописываем запуск функции newElement в поле input c id myInput при нажатии на кнопку Enter
+// А вот здесь прописываем запуск функции newTask в поле input c id myInput при нажатии на кнопку Enter
 document.getElementById("myInput").onkeyup = function (event) {
     if (event.code == "Enter") {
-        newElement()
+        newTask()
     }
 };
